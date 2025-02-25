@@ -1,0 +1,16 @@
+CREATE DATABASE online_voting;
+
+USE online_voting;
+
+CREATE TABLE voters (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    voted BOOLEAN DEFAULT FALSE
+);
+
+CREATE TABLE candidates (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    votes INT DEFAULT 0
+);
